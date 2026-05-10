@@ -1,0 +1,13 @@
+import api from './axios'
+export const getNearbyParkings = (lat, lng, radius = 10) => api.get(`/user/parkings/nearby?lat=${lat}&lng=${lng}&radius=${radius}`)
+export const getParkingById = (id) => api.get(`/user/parking/${id}`)
+export const getSlotsByParking = (parkingId) => api.get(`/user/slots/${parkingId}`)
+export const bookSlot = (data) => api.post('/user/book-slot', data)
+export const createPaymentOrder = (bookingId) => api.post(`/user/payment/create-order?bookingId=${bookingId}`)
+export const verifyPayment = (data) => api.post('/user/payment/verify', data)
+export const getBookingTicket = (bookingId) => api.get(`/user/ticket/${bookingId}`)
+export const extendBooking = (bookingId, data) => api.put(`/user/booking/extend/${bookingId}`, data)
+export const getBookingHistory = () => api.get('/user/bookings/history')
+export const addReview = (data) => api.post('/user/review/add', data)
+export const addComplaint = (data) => api.post('/user/complaint/add', data)
+export const contactAdmin = (data) => api.post('/user/contact-admin', data)

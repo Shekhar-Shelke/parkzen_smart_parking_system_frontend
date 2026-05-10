@@ -1,0 +1,10 @@
+import api from './axios'
+export const getOwnerDashboard = () => api.get('/owner/dashboard')
+export const addSlot = (data) => api.post('/owner/slot/add', data)
+export const updateSlot = (slotId, data) => api.put(`/owner/slot/update/${slotId}`, data)
+export const deleteSlot = (slotId) => api.delete(`/owner/slot/delete/${slotId}`)
+export const updateSlotStatus = (slotId, status) => api.put(`/owner/slot/status/${slotId}?status=${status}`)
+export const getOwnerBookings = () => api.get('/owner/bookings')
+export const getOwnerPayments = () => api.get('/owner/payments')
+export const getOwnerAnalytics = () => api.get('/owner/analytics')
+export const getOwnerReviews = () => api.get('/owner/reviews')
