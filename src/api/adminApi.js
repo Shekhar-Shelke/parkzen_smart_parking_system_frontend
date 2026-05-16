@@ -1,7 +1,7 @@
 import api from './axios'
 export const getAdminDashboard = () => api.get('/admin/dashboard')
 export const getAllUsers = () => api.get('/admin/users')
-export const getAllOwners = () => api.get('/admin/owners')
+export const getAllOwners = () => api.get('owners')
 export const getAllBookings = () => api.get('/admin/bookings')
 export const getAllPayments = () => api.get('/admin/payments')
 export const getAllFeedbacks = () => api.get('/admin/feedbacks')
