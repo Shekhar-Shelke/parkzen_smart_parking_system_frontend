@@ -29,10 +29,10 @@ const ManageSlots = () => {
     }).catch(() => {}).finally(() => setLoading(false))
 
     // Get slots via parking areas
-    api.get('/admin/owners').then(async r => {
+    api.get('/owners').then(async r => {
       const owner = r.data.data?.[0]
       if (owner?.id) {
-        const areas = await api.get(`/admin/owners`)
+        const areas = await api.get(`/owners`)
         setAreas(areas.data.data?.filter(o => o.email === JSON.parse(localStorage.getItem('parkzen_user'))?.email) || [])
       }
     }).catch(() => {}).finally(() => setLoading(false))

@@ -14,7 +14,7 @@ const FeedbackForm = () => {
   const [hover, setHover] = useState(0)
 
   useEffect(() => {
-    api.get('/admin/owners').then(r => setOwners(r.data.data || [])).catch(() => {})
+    api.get('/owners').then(r => setOwners(r.data.data || [])).catch(() => {})
   }, [])
 
   const handleSubmit = async (e) => {

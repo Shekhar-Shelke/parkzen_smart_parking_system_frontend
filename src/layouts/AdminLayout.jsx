@@ -4,7 +4,7 @@ import MobileSidebar from '../components/layout/MobileSidebar'
 const links = [
   { to:'/admin/dashboard', icon:'📊', label:'Dashboard' },
   { to:'/admin/users', icon:'👥', label:'Users' },
-  { to:'/admin/owners', icon:'🏢', label:'Owners' },
+  { to:'/owners', icon:'🏢', label:'Owners' },
   { to:'/admin/bookings', icon:'📋', label:'Bookings' },
   { to:'/admin/payments', icon:'💳', label:'Payments' },
   { to:'/admin/complaints', icon:'📢', label:'Complaints' },

@@ -13,7 +13,7 @@ const ComplaintForm = () => {
   const set = k => e => setForm(p => ({...p, [k]: e.target.value}))
 
   useEffect(() => {
-    api.get('/admin/owners').then(r => setOwners(r.data.data || [])).catch(() => {})
+    api.get('/owners').then(r => setOwners(r.data.data || [])).catch(() => {})
   }, [])
 
   const handleSubmit = async (e) => {
